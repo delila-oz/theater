@@ -6,6 +6,22 @@
     <title> {{pageTitle}} </title>
   </head>
   <body>
-  <h1>Kwuss</h1>
+    <header>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1> {{ pageTitle }} </h1>
+        </div>
+      </div> 
+      <a href="#main" class="site-hero-scroll">
+        <img src="/assets/icons/chevrons-down.svg" alt="Springe nach unten">
+      </a>
+    </header>
+<main>
+{% block content %}
+{% endblock %}
+</main>
+
+
+<footer> {% include "./footer.njk" %}</footer>
   </body>
 </html>
