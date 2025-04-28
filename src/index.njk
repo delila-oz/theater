@@ -3,4 +3,33 @@
 
 {% block content %}
 <p>Starseitentext!</p>
+
+
+
+{# <ul>
+{% for play in collections.play %}
+  <li>{{ play.data.title }}</li>
+{% endfor %}
+</ul> #}
+
+{% for play in collections.play %}
+<div class="item item{{play.data.number}}">
+    <div class="play-image">    
+        <figure>
+        <!-- <img src="{{ play.flyer }}"/> -->
+         <img src="https://images.unsplash.com/photo-1742750989574-3412f440a0c4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        </figure>
+    </div>
+
+    <div class="play-text">
+        <h2> {{play.data.title}}</h2>
+        <p>
+            {{play.data.teaser}}
+        </p>
+        <a href="{{ play.url }}" class="button">Weiter</a>
+    </div>
+</div>
+{% endfor %}
+
+
 {% endblock %}
