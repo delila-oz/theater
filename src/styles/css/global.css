@@ -151,6 +151,11 @@ main, footer {
   flex-basis: 15rem;
   align-self: end;
 }
+
+.layout:nth-child(odd) .layout__item--body {
+  text-align: right;
+}
+
 .layout__item--figure {
   margin-right: auto;
   flex-grow: 1;
@@ -188,6 +193,7 @@ img {
 }
 
 /*TODO mobile view immer erst Bild dann Text 
-h2 bündig unten enden lassen mit Bild und ohne Zeilenumbruch*/
+h2 bündig unten enden lassen mit Bild und ohne Zeilenumbruch
+h2 und p rechts bzw linksbündig zum bild */
 
 /*END Bereich Startseite Stücke */
