@@ -1,35 +1,24 @@
 {% extends "base.njk" %}
 {% set pageTitle = "die biografen - ein ensemble" %}
+{% set headerImg = "/assets/images/hero-image01.png" %}
 
 {% block content %}
 <p>Starseitentext!</p>
 
 
-
-{# <ul>
-{% for play in collections.play %}
-  <li>{{ play.data.title }}</li>
-{% endfor %}
-</ul> #}
-
-{% for play in collections.play %}
-<div class="item item{{play.data.number}}">
-    <div class="play-image">    
-        <figure>
-        <!-- <img src="{{ play.flyer }}"/> -->
-         <img src="https://images.unsplash.com/photo-1742750989574-3412f440a0c4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        </figure>
-    </div>
-
-    <div class="play-text">
-        <h2> {{play.data.title}}</h2>
+{% for play in collections.play | reverse %}
+<div class="layout">
+  <div class="layout__item layout__item--body">
         <p>
             {{play.data.teaser}}
         </p>
-        <a href="{{ play.url }}" class="button">Weiter</a>
-    </div>
+        <h2><a href="{{ play.url }}"> {{play.data.title}}</a></h2>
+  </div>
+  <div class="layout__item layout__item--figure">
+    <img src=" {{play.data.image}}">
+    {# <img src="https://images.unsplash.com/photo-1516750930166-ed88ab1adb61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=65c8f6fcafaf68f5fa434b5f076780fd&auto=format&fit=crop&w=600&q=80" alt=""> #}
+  </div>
 </div>
 {% endfor %}
-
 
 {% endblock %}

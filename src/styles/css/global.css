@@ -1,9 +1,10 @@
 @import url(./reset.css);
 
 :root {
-  --dark: rgb(10, 10, 10);
+  --dark: rgb(56, 50, 56);
   --hague-blue: rgb(54, 94, 110);
   --light: rgb(245, 245, 245);
+  --light-grey: rgb(210, 210, 210);
 }
 
 body, html {
@@ -21,17 +22,29 @@ h1 {
 h2 {
   font-size: 3.2em;
   margin-bottom: 0.5em;
-  color: var(--dark);
+  color: var(--light);
   text-decoration: none;
 }
 
 p {
   font-size: 1.5em;
   margin-bottom: 0.5em;
+  color: var(--light);
 }
 
-main {
+h2 a {
+  color: var(--light);
+  text-decoration: none;
+}
 
+header {
+	position: relative;
+	height: 100vh;
+}
+
+header img {
+	width: 100%;
+	height: 100%;
 }
 
 #intro {
@@ -98,7 +111,7 @@ a.button {
   top: 65%;
   width: 100%;
   /*transform: translate(-50%, -50%);*/
-  color: white;
+  color: var(--light);
   padding: 2em;
 }
 
@@ -109,35 +122,72 @@ a.button {
   transform: translateX(-50%);
 }
 
-/*Bereich Startseite Stücke */
-
-div.plays {
-  margin: 3em auto;
-  display: block;
+main, footer {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.play-text{
-  padding: 4em 10em;
-  align-content: center;
-}
+/*START Bereich Startseite Stücke */
 
-.play-text a {
-  margin-top: 1em;
-}
-
-.play-image {
-  padding: 3em 2em;
-}
-
-.item {
-  background-color: var(--light);
+.layout {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: -1em;
+  margin-left: -3.5em;
+  align-items: center;
 }
-
-.item:nth-child(even) {
+.layout:not(:first-of-type) {
+  margin-top: 6em;
+}
+.layout:nth-child(even) {
   flex-direction: row-reverse;
 }
-
-.item div {
-  max-width: 50%;
+.layout__item {
+  padding-top: 1em;
+  padding-left: 3.5em;
 }
+.layout__item--body {
+  flex-grow: 9999;
+  flex-basis: 15rem;
+  align-self: end;
+}
+.layout__item--figure {
+  margin-right: auto;
+  flex-grow: 1;
+}
+@supports ((max-width: -webkit-max-content) or (max-width: -moz-max-content) or (max-width: max-content)) {
+  .layout__item--figure {
+    min-width: 15rem;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    flex-basis: 15rem;
+    flex-grow: 99999;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* .layout__item * + * {
+  margin-top: 1em;
+} */
+
+.layout__item h2 {
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.layout__item p {
+  color: var(--light-grey);
+}
+
+/*TODO mobile view immer erst Bild dann Text 
+h2 bündig unten enden lassen mit Bild und ohne Zeilenumbruch*/
+
+/*END Bereich Startseite Stücke */
