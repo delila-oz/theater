@@ -1,3 +1,6 @@
 {
-    "tags": "play"
+    "tags": [
+        "play"
+    ],
+    "layout": "/playsLayout.njk"
 }

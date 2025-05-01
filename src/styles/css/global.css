@@ -47,6 +47,7 @@ h2 a {
 header {
 	position: relative;
 	height: 100vh;
+  clip-path: inset(0); /*wichtig für paralax effekt*/
 }
 
 #intro {
@@ -182,3 +183,12 @@ img {
 /*TODO mobile view immer erst Bild dann Text */
 
 /*END Bereich Startseite Stücke */
+
+header img {
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

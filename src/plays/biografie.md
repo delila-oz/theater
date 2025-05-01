@@ -6,5 +6,4 @@ teaser: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
 image: "/assets/images/biografie_titel_web.jpg"
 ---
 
-
 ## Überschrift
