@@ -1,8 +1,6 @@
-  body a,
-  body a:visited {
-    color: #ccc;
-    text-decoration: none;
-  }
+@import url(./reset.css);
+ 
+
   body p {
     margin: 0;
   }
@@ -28,6 +26,16 @@
     display: block;
     transition: all 0.8s;
   }
+
+  /* für textfelder in der gallery */
+  .flexbox .item div {
+    width: 100%;
+    height: fit-content;
+    display: block;
+    transition: all 0.8s;
+    padding: 1em 0.5em;
+  }
+
   .flexbox .item .title {
     position: absolute;
     top: 48%;

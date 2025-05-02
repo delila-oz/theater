@@ -46,3 +46,36 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+:root {
+	--dark: rgb(56, 50, 56);
+	--hague-blue: rgb(54, 94, 110);
+	--light: rgb(245, 245, 245);
+	--light-grey: rgb(210, 210, 210);
+  }
+
+  body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--dark);
+  }
+  
+  h1 {
+	font-size: 4em;
+	margin-bottom: 1em;
+	columns: var(--light);
+  }
+
+  h2 {
+	font-size: 3.2em;
+	margin-bottom: 0.5em;
+	color: var(--light);
+	text-decoration: none;
+  }  
+
+  p {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: var(--light);
+  }
