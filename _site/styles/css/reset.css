@@ -54,6 +54,12 @@ table {
 	--light-grey: rgb(210, 210, 210);
   }
 
+
+  :focus {
+	outline: 3px dotted darkorange;
+	outline-offset: 2px;
+  } 
+
   body, html {
 	height: 100%;
 	margin: 0;
@@ -64,7 +70,7 @@ table {
   h1 {
 	font-size: 4em;
 	margin-bottom: 1em;
-	columns: var(--light);
+	color: var(--light);
   }
 
   h2 {
@@ -78,4 +84,21 @@ table {
 	font-size: 1.5em;
 	margin-bottom: 0.5em;
 	color: var(--light);
+	line-height: 120%;
+  }
+
+  footer {
+	background-color: dimgray;
+  }
+  
+  footer .copyright {
+	max-width: 90%;
+	margin: 6em auto;
+	padding: 3em 0;
+  }
+  
+  footer * {
+	font-size: 1em;
+	color: var(--light);
+
   }

@@ -5,12 +5,6 @@ h2 a {
   text-decoration: none;
 }
 
-
-:focus {
-  outline: 3px dotted darkorange;
-  outline-offset: 2px;
-} 
-
 header {
 	position: relative;
 	height: 100vh;
@@ -37,19 +31,7 @@ header {
   padding: 3em 0;
 }
 
-footer {
-  background-color: dimgray;
-}
 
-footer .copyright {
-  max-width: 90%;
-  margin: 6em auto;
-  padding: 3em 0;
-}
-
-footer p {
-  font-size: 1em;
-}
 
 a.button {
   padding: 0.7em 1em;

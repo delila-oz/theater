@@ -1,18 +1,12 @@
 @import url(./reset.css);
- 
 
-  body p {
-    margin: 0;
-  }
-  
   .flexbox {
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    height: 100vw;
+    flex-direction: column;
+    height: 110vw;
   }
   .flexbox:hover img {
     opacity: 0.28;
@@ -33,18 +27,16 @@
     height: fit-content;
     display: block;
     transition: all 0.8s;
-    padding: 1em 0.5em;
   }
 
-  .flexbox .item .title {
-    position: absolute;
-    top: 48%;
-    left: 0;
-    width: 100%;
-    padding: 0 3%;
-    font-size: 30px;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.42);
+  .textTile * {
+    padding: 5%;
   }
+
+  .textTile h1 {
+    margin-bottom: 0;
+  }
+
   .flexbox .item:hover img {
     opacity: 1;
   }
