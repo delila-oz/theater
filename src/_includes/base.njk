@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> {{pageTitle}} </title>
-    <link rel="stylesheet" href="styles/css/global.css"/>
-  </head>
+    <link rel="stylesheet" href="{{ relative_prefix }}/styles/css/reset.css"/>
+    <link rel="stylesheet" href="{{ relative_prefix }}/styles/css/global.css"/>
+    <link rel="stylesheet" href="{{ relative_prefix }}/styles/css/plays.css"/>
+{% if css_include %}
+<link rel="stylesheet" href="{{ css_include }}" />
+{% endif %}  
+</head>
+
   <body>
-    <header>
-      <img src="/assets/images/hero-image01.png">
-      <h1 class="hero-text"> {{ pageTitle }} </h1>
-      <a href="#main" class="site-hero-scroll">
-        <img src="/assets/icons/chevrons-down.svg" alt="Springe nach unten">
-      </a>
-    </header>
-<main id="main">
-{% block content %}
-{% endblock %}
-</main>
+          {% block header%}{% endblock %}
+
+    <main id="main">
+    {% block content %}
+
+      {{ content | safe }}
+
+    {% endblock %}
+    </main>
 
 
-<footer> {% include "./footer.njk" %}</footer>
+    <footer> {% include "./footer.njk" %}</footer>
+    
   </body>
 </html>

@@ -2,6 +2,17 @@
 {% set pageTitle = "die biografen - ein ensemble" %}
 {% set headerImg = "/assets/images/hero-image01.png" %}
 
+
+{% block header %}
+<header>
+  <img src="/assets/images/hero-image01.png">
+  <h1 class="hero-text"> {{ pageTitle }} </h1>
+  <a href="#main" class="site-hero-scroll">
+    <img src="/assets/icons/chevrons-down.svg" alt="Springe nach unten">
+  </a>
+  </header>
+{% endblock %}
+
 {% block content %}
 <div id="intro"><p>Startseitentext!</p></div> 
 
