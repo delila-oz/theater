@@ -64,9 +64,9 @@ table {
 	height: 100%;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: var(--dark);
-  }
-  
+	/* background-color: var(--dark); */
+  }  
+
   h1 {
 	font-size: 4em;
 	margin-bottom: 1em;
@@ -93,12 +93,16 @@ table {
   
   footer .copyright {
 	max-width: 90%;
-	margin: 6em auto;
-	padding: 3em 0;
+	padding: 6em;
   }
   
   footer * {
 	font-size: 1em;
 	color: var(--light);
 
+  }
+
+  .gradient {
+	background: #000;
+	background: linear-gradient(#000, var(--dark));
   }

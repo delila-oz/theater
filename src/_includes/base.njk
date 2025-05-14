@@ -13,17 +13,15 @@
 </head>
 
   <body>
-          {% block header%}{% endblock %}
+    {% block header%}{% endblock %}
 
+    <div class="gradient">
     <main id="main">
     {% block content %}
-
       {{ content | safe }}
-
     {% endblock %}
     </main>
-
-
+    </div>
     <footer> {% include "./footer.njk" %}</footer>
     
   </body>

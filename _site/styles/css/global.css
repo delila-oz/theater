@@ -12,7 +12,7 @@ header {
 }
 
 #intro {
-  margin: 5em 0;
+  padding: 5em 0;
   /* background-color: var(--hague-blue); */
 }
 
@@ -76,6 +76,11 @@ main {
 .layout:not(:first-of-type) {
   margin-top: 6em;
 }
+
+.layout:last-of-type {
+  padding-bottom: 6em;
+}
+
 .layout:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -114,6 +119,10 @@ img {
   width: auto;
   height: auto;
   vertical-align: middle;
+}
+
+img .flyer {
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 
 /* .layout__item * + * {
