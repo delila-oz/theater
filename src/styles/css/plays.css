@@ -9,16 +9,17 @@
     height: 110vw;
   }
   .flexbox:hover img {
-    opacity: 0.28;
+    opacity: 1;
   }
   .flexbox .item {
     position: relative;
     width: 33.33%;
   }
   .flexbox .item img {
-    width: 100%;
+    width: 95%;
     display: block;
     transition: all 0.8s;
+    padding: 5% 0;
   }
 
   /* für textfelder in der gallery */
@@ -30,7 +31,7 @@
   }
 
   .textTile * {
-    padding: 5%;
+    padding: 0 5% 0 0;
   }
 
   .textTile h1 {

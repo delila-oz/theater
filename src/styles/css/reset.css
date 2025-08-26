@@ -99,7 +99,14 @@ table {
   footer * {
 	font-size: 1em;
 	color: var(--light);
+  }
 
+  .text-right {
+	float: right;
+  }
+
+  .text-right img {
+	transform: rotate(180deg);
   }
 
   .gradient {
